@@ -1,38 +1,370 @@
+/* App.css - Global Styles for Professional Portfolio */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000000" stroke="%23ffffff" stroke-width="1"/></svg>') 8 8, auto;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px; /* Account for fixed navigation */
+}
+
+/* Custom Scrollbar */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  background-clip: content-box;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thick;
+  scrollbar-color: #8b5cf6 rgba(255, 255, 255, 0.1);
+}
+
+/* Selection */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
 }
 
-@keyframes App-logo-spin {
+/* Smooth transitions for all interactive elements */
+button,
+a,
+.nav-link,
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+/* Global hover effects for interactive elements */
+button:hover,
+a:hover,
+.nav-link:hover,
+.interactive:hover,
+.clickable:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced form field hover effects */
+input:hover,
+textarea:hover,
+select:hover {
+  box-shadow: 
+    0 0 0 1px rgba(139, 92, 246, 0.3),
+    0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+/* Glow effect for focused elements */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 
+    0 0 0 2px rgba(139, 92, 246, 0.5),
+    0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Error states */
+.error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Success states */
+.success {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Custom Solid White Cursor Trail */
+.custom-cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  background: #ffffff;
+  mix-blend-mode: difference;
+  transition: width 0.2s ease, height 0.2s ease;
+  opacity: 1;
+  filter: blur(2px);
+}
+
+/* Enhanced cursor interaction styles */
+input:hover,
+textarea:hover,
+button:hover,
+a:hover,
+.interactive:hover,
+.clickable:hover {
+  position: relative;
+}
+
+input:hover::before,
+textarea:hover::before,
+button:hover::before,
+a:hover::before,
+.interactive:hover::before,
+.clickable:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  animation: fieldGlow 0.3s ease forwards;
+}
+
+@keyframes fieldGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.custom-cursor.hover {
+  width: 55px;
+  height: 75px;
+  background: #8b5cf6;
+  opacity: 1;
+  filter: blur(2px);
+}
+
+/* Page Content Container */
+.page-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px; /* Space for navigation */
+}
+
+/* Interactive Elements Cursor Enhancement */
+button, a, .interactive, .clickable {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="%23000000" stroke="%23ffffff" stroke-width="1"/></svg>') 10 10, pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover, .interactive:hover, .clickable:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation will be styled in separate Navigation.css */
+
+/* Global animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 60px;
+  }
+}
+
+/* Scroll-based animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
