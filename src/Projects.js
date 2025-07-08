@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = ({ setCurrentPage }) => {
   const projectsRef = useRef();
   const [showAllProjects, setShowAllProjects] = React.useState(false);
+  const [fallingDucks, setFallingDucks] = React.useState([]);
 
   useEffect(() => {
     // Animate page header on load
@@ -269,6 +270,24 @@ const Projects = ({ setCurrentPage }) => {
         'Game state management',
         'Classic board game recreation'
       ]
+    },
+    {
+      id: 12,
+      title: 'This Website',
+      description: 'A modern, interactive personal portfolio website built with React. Features immersive 3D backgrounds, smooth animations, interactive mini-games, and responsive design. Showcases advanced web development skills with modern JavaScript frameworks and libraries.',
+      icon: '🌐',
+      category: 'Web',
+      tech: ['React', 'JavaScript', 'Three.js', 'GSAP', 'Framer Motion', 'CSS3', 'HTML5'],
+      github: 'https://github.com/taqitazwar/react-portfolio-1.0',
+      featured: true,
+      features: [
+        'Interactive 3D Three.js backgrounds',
+        'Smooth GSAP animations and transitions',
+        'Responsive design for all devices',
+        'Modern component-based architecture',
+        'Dynamic navigation and routing',
+      ],
+      isPortfolio: true
     }
   ];
 
@@ -294,8 +313,49 @@ const Projects = ({ setCurrentPage }) => {
     setShowAllProjects(true);
   };
 
+  const handleDontClickMe = () => {
+    // Create WAYYYY more falling ducks (80 ducks!)
+    const newDucks = [];
+    for (let i = 0; i < 80; i++) {
+      newDucks.push({
+        id: Date.now() + i,
+        x: Math.random() * (window.innerWidth - 50),
+        delay: Math.random() * 4, // Longer delay range
+        size: 25 + Math.random() * 30, // Varied sizes
+        rotation: Math.random() * 360,
+        animationDuration: 1.5 + Math.random() * 1.5, // Faster fall duration
+        horizontalDrift: (Math.random() - 0.5) * 200 // Add horizontal movement
+      });
+    }
+    
+    setFallingDucks(newDucks);
+    
+    // Clear ducks after animation (faster timeout)
+    setTimeout(() => {
+      setFallingDucks([]);
+    }, 6000);
+  };
+
   return (
     <div className="projects-page" ref={projectsRef}>
+      {/* Falling Ducks */}
+      {fallingDucks.map(duck => (
+        <div
+          key={duck.id}
+          className="falling-duck"
+          style={{
+            left: `${duck.x}px`,
+            fontSize: `${duck.size}px`,
+            animationDelay: `${duck.delay}s`,
+            animationDuration: `${duck.animationDuration}s`,
+            transform: `rotate(${duck.rotation}deg)`,
+            '--horizontal-drift': `${duck.horizontalDrift}px`
+          }}
+        >
+          🦆
+        </div>
+      ))}
+      
       <div className="container">
         {/* Page Header */}
         <div className="page-header">
@@ -385,6 +445,15 @@ const Projects = ({ setCurrentPage }) => {
                   <span className="btn-icon">🔗</span>
                   View Code
                 </a>
+                {project.isPortfolio && (
+                  <button 
+                    className="btn btn-secondary dont-click-btn"
+                    onClick={handleDontClickMe}
+                  >
+                    <span className="btn-icon">🦆</span>
+                    Don't Click Me
+                  </button>
+                )}
               </div>
             </div>
           ))}

@@ -6,6 +6,31 @@ import './AboutMe.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = ({ setCurrentPage }) => {
+  // Utility function for robust scroll-to-top behavior
+  const scrollToTop = () => {
+    // Method 1: Try smooth scroll
+    try {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } catch (error) {
+      // Method 2: Force instant scroll
+      window.scrollTo(0, 0);
+    }
+    
+    // Method 3: Additional fallback for stubborn mobile browsers
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
+  const handlePageChange = (pageId) => {
+    setCurrentPage(pageId);
+    // Execute immediately and also with a small delay
+    scrollToTop();
+    setTimeout(scrollToTop, 100);
+  };
+
   useEffect(() => {
     // Animate page elements on load
     gsap.fromTo('.about-header', 
@@ -228,12 +253,12 @@ const AboutMe = ({ setCurrentPage }) => {
   };
 
   const achievements = [
-    { title: 'Portfolio Website Creation', year: '2025', description: 'Created portfolio website from scratch' },
-    { title: 'Started AWS Preparation', year: '2024', description: 'Started AWS preparation' },
-    { title: 'Employee of the Month', year: '2024', description: 'Recognized at Gap Inc for surpassing monthly targets by 15% and exceptional customer service' },
-    { title: 'Sales Excellence', year: '2023', description: 'Exceeded weekly sales targets by 20% through analytical approach and data-driven decision making' },
-    { title: 'Academic Excellence', year: '2022-Present', description: 'Maintaining strong academic performance while pursuing Computer Science degree at Memorial University' },
-    { title: 'Technical Leadership', year: '2019', description: 'Selected as Ambassador for International Youth Math Challenge, promoting STEM education globally' }
+    { title: 'Portfolio Website Creation', year: '2025', description: 'Created portfolio website from scratch using React.js with modern UI/UX design' },
+    { title: 'AWS Cloud Certification Journey', year: '2024', description: 'Started AWS Cloud Practitioner certification preparation' },
+    { title: 'Employee of the Month', year: '2024', description: 'Recognized for highest loyal membership generations increasing monthly revenue through email marketing' },
+    { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets by 20% through analytical approach and data-driven decisions' },
+    { title: 'Daily Stars Highest Achievers Award', year: '2019', description: 'Awarded for exceptional academic performance and excellence in mathematics and science' },
+    { title: 'Technical Leadership', year: '2019 - Present', description: 'Selected as Ambassador for International Youth Math Challenge, promoting STEM education globally' }
   ];
 
   return (
@@ -297,7 +322,7 @@ const AboutMe = ({ setCurrentPage }) => {
         <section className="about-section skills-section">
           <div className="section-header">
             <h2>Technical Skills</h2>
-            <p>Technologies I work with and my proficiency levels</p>
+            <p>My technology stack and the tools that power my projects</p>
           </div>
           <div className="skills-grid">
             {skills.map((skill, index) => (
@@ -460,7 +485,7 @@ const AboutMe = ({ setCurrentPage }) => {
         <div className="back-to-home">
           <button 
             className="btn btn-outline"
-            onClick={() => setCurrentPage('home')}
+            onClick={() => handlePageChange('home')}
           >
             ← Back to Home
           </button>

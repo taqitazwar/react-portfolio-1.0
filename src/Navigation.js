@@ -26,11 +26,27 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
     setCurrentPage(pageId);
     setIsMobileMenuOpen(false);
     
-    // Smooth scroll to top when navigation is clicked
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    // Scroll to top with multiple fallbacks for mobile browsers
+    const scrollToTop = () => {
+      // Method 1: Try smooth scroll
+      try {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } catch (error) {
+        // Method 2: Force instant scroll
+        window.scrollTo(0, 0);
+      }
+      
+      // Method 3: Additional fallback for stubborn mobile browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    
+    // Execute immediately and also with a small delay
+    scrollToTop();
+    setTimeout(scrollToTop, 100);
   };
 
   return (

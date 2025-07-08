@@ -2693,10 +2693,63 @@ body {
   margin-right: auto !important;
   } 
 
-.profile-image-container {
+/* 3D Flip Card Styles */
+.flip-card-container {
   position: relative;
   width: 300px;
   height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--primary-purple), var(--pink), var(--orange));
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  animation: profileGlow 3s ease-in-out infinite;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid transparent;
@@ -2721,6 +2774,67 @@ body {
   transform: scale(1.05);
 }
 
+/* Open to Work Styling */
+.open-to-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.work-status-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounceIcon 2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.work-status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-main {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+/* Flip Instruction */
+.flip-instruction {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  animation: instructionFade 10s ease-in-out 2s infinite;
+  transition: opacity 0.3s ease;
+}
+
+.flip-instruction span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
 @keyframes profileGlow {
   0%, 100% { 
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
@@ -2728,6 +2842,40 @@ body {
   50% { 
     box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
   }
+}
+
+@keyframes bounceIcon {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+  }
+  50% { 
+    transform: translateY(-5px) scale(1.1);
+  }
+}
+
+@keyframes textPulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes instructionFade {
+  0%, 95%, 100% { 
+    opacity: 0;
+  }
+  3%, 7% { 
+    opacity: 1;
+  }
+}
+
+/* Hover Effects */
+.flip-card-container:hover .flip-card {
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -2745,9 +2893,28 @@ body {
     gap: 0.7rem;
   }
 
+  .flip-card-container {
+    width: 110px;
+    height: 110px;
+  }
+
   .profile-image-container {
     width: 110px;
     height: 110px;
+  }
+
+  .work-status-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .status-main {
+    font-size: 0.9rem;
+  }
+
+  .flip-instruction {
+    bottom: -30px;
+    font-size: 0.7rem;
   }
 
   .greeting-text {
@@ -2813,9 +2980,32 @@ body {
     gap: 0.5rem;
   }
 
+  .flip-card-container {
+    width: 90px;
+    height: 90px;
+  }
+
   .profile-image-container {
     width: 90px;
     height: 90px;
+  }
+
+  .open-to-work {
+    padding: 1rem;
+  }
+
+  .work-status-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .status-main {
+    font-size: 0.7rem;
+  }
+
+  .flip-instruction {
+    bottom: -25px;
+    font-size: 0.6rem;
   }
 
   .greeting-text {

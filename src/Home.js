@@ -1,9 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import './Home.css';
 
 const Home = ({ setCurrentPage }) => {
   const homeRef = useRef(null);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [startY, setStartY] = useState(0);
+  const [startX, setStartX] = useState(0);
+  const flipCardRef = useRef(null);
+
+  // Handle touch/swipe for flip
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    setStartY(touch.clientY);
+    setStartX(touch.clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    const touch = e.changedTouches[0];
+    const deltaY = touch.clientY - startY;
+    const deltaX = touch.clientX - startX;
+    
+    // Check if it's a vertical swipe (prioritize Y direction)
+    if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
+      setIsFlipped(!isFlipped);
+    }
+  };
+
+  // Handle mouse wheel for desktop
+  const handleWheel = (e) => {
+    e.preventDefault();
+    if (Math.abs(e.deltaY) > 10) {
+      setIsFlipped(!isFlipped);
+    }
+  };
+
+  // Handle click for easy flipping
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
 
   useEffect(() => {
     // Simple fade-in animations
@@ -12,7 +47,7 @@ const Home = ({ setCurrentPage }) => {
       { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" }
     );
 
-    gsap.fromTo('.profile-image-container', 
+    gsap.fromTo('.flip-card-container', 
       { scale: 0.8, opacity: 0 }, 
       { scale: 1, opacity: 1, duration: 1.2, delay: 0.4, ease: "power3.out" }
     );
@@ -71,12 +106,33 @@ const Home = ({ setCurrentPage }) => {
         <div className="hero-content">
           <div className="hero-main">
             <div className="profile-section">
-              <div className="profile-image-container">
-                <img 
-                  src="/profile-picture.jpg" 
-                  alt="Taqi Tazwar" 
-                  className="profile-image"
-                />
+              <div 
+                className="flip-card-container"
+                ref={flipCardRef}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onWheel={handleWheel}
+                onClick={handleClick}
+              >
+                <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}>
+                  <div className="flip-card-front">
+                    <div className="profile-image-container">
+                      <img 
+                        src="/profile-picture.jpg" 
+                        alt="Taqi Tazwar" 
+                        className="profile-image"
+                      />
+                    </div>
+                  </div>
+                  <div className="flip-card-back">
+                    <div className="open-to-work">
+                      <div className="work-status-icon">💼</div>
+                      <div className="work-status-text">
+                        <span className="status-main">OPEN TO WORK</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
