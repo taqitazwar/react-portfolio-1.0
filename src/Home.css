@@ -2903,13 +2903,18 @@ body {
     height: 110px;
   }
 
+  .open-to-work {
+    padding: 0.8rem;
+  }
+
   .work-status-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .status-main {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    line-height: 1.1;
   }
 
   .flip-instruction {
@@ -2991,16 +2996,17 @@ body {
   }
 
   .open-to-work {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .work-status-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
   }
 
   .status-main {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    line-height: 1;
   }
 
   .flip-instruction {
