@@ -236,6 +236,25 @@
   font-weight: bold;
 }
 
+.project-video {
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-video iframe {
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-video:hover iframe {
+  transform: scale(1.02);
+}
+
 .project-actions {
   display: flex;
   gap: 1rem;

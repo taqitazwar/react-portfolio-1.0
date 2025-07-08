@@ -78,6 +78,132 @@ const Projects = ({ setCurrentPage }) => {
   const projects = [
     {
       id: 1,
+      title: 'ZeroWaste Intersession Project',
+      description: 'A collaborative Flutter project focused on sustainability and waste reduction. Developed during intersession with team collaboration and modern mobile development practices. Have a look at our app running live!',
+      icon: '♻️',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'Team Collaboration', 'Sustainability'],
+      github: 'https://github.com/taqitazwar/gr06-zerowaste-25-intersession',
+      youtube: 'https://www.youtube.com/watch?v=a64HDa_a4Wc',
+      featured: true,
+      features: [
+        'Sustainability focus',
+        'Team collaboration',
+        'Flutter mobile development',
+        'Waste reduction features',
+        'Modern development practices'
+      ]
+    },
+    {
+      id: 2,
+      title: 'Wordnet Server',
+      description: 'A Java socket-based word guessing game server implementing client-server architecture. Features multi-client support, real-time communication, and game state management.',
+      icon: '🎯',
+      category: 'Desktop',
+      tech: ['Java', 'Socket Programming', 'Networking', 'Multi-threading'],
+      github: 'https://github.com/taqitazwar/Wordnet-Server',
+      youtube: 'https://youtu.be/wGynChBSLXk',
+      featured: true,
+      features: [
+        'Socket-based communication',
+        'Multi-client support',
+        'Real-time game logic',
+        'Server-client architecture',
+        'Thread management'
+      ]
+    },
+    {
+      id: 3,
+      title: 'Hiking Adventure App',
+      description: 'A comprehensive Flutter mobile application designed for outdoor enthusiasts. Features real-time GPS tracking, offline maps, trail recommendations, and Firebase integration for data management.',
+      icon: '🏔️',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'Firebase', 'GPS', 'Mobile Development'],
+      github: 'https://github.com/taqitazwar/a4-discover-and-log-nl-hikes-taqitazwar',
+      youtube: 'https://youtube.com/shorts/fzCnzvCiBuc',
+      featured: true,
+      features: [
+        'Real-time GPS tracking',
+        'Firebase integration',
+        'Trail recommendations',
+        'Offline functionality',
+        'User authentication'
+      ]
+    },
+    {
+      id: 4,
+      title: '2D Rubik\'s Cube Solver',
+      description: 'An intelligent 2D Rubik\'s cube solver implemented in Java. Features algorithm optimization, visual representation, and step-by-step solution generation with efficient solving techniques.',
+      icon: '🧩',
+      category: 'Desktop',
+      tech: ['Java', 'Algorithms', 'Problem Solving', 'GUI'],
+      github: 'https://github.com/taqitazwar/2D-Rubiks-Cube-Solver',
+      youtube: 'https://youtu.be/P08ZxvFuUM4',
+      featured: true,
+      features: [
+        'Algorithm optimization',
+        'Visual cube representation',
+        'Step-by-step solutions',
+        'Efficient solving techniques',
+        'Interactive GUI'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Dear Diary App',
+      description: 'A privacy-focused personal diary application built with Flutter. Features secure local storage, mood tracking, and intuitive user interface for daily journaling and reflection.',
+      icon: '📖',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'SQLite', 'Mobile UI/UX'],
+      github: 'https://github.com/taqitazwar/dear_diary_app',
+      youtube: 'https://youtube.com/shorts/rziuLGuN05E',
+      featured: true,
+      features: [
+        'Secure local storage',
+        'Mood tracking',
+        'Daily journaling',
+        'Intuitive UI design',
+        'Privacy-focused architecture'
+      ]
+    },
+    {
+      id: 6,
+      title: 'Hanoi Explorer App',
+      description: 'An Android city explorer application for discovering Hanoi. Built with Flutter featuring local recommendations, cultural insights, and interactive city navigation for tourists and locals.',
+      icon: '🏛️',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'Android', 'Location Services'],
+      github: 'https://github.com/taqitazwar/hanoi_explorer_app',
+      youtube: 'https://youtube.com/shorts/cRWeD5Eg4M8',
+      featured: true,
+      features: [
+        'Local recommendations',
+        'Cultural insights',
+        'Interactive navigation',
+        'Tourist-friendly design',
+        'Location-based services'
+      ]
+    },
+    {
+      id: 7,
+      title: 'Expense Tracker',
+      description: 'A personal finance management application for tracking daily expenses and budget management. Features intuitive interface and comprehensive expense categorization.',
+      icon: '💰',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'Local Storage', 'UI/UX'],
+      github: 'https://github.com/taqitazwar/expense_tracker',
+      youtube: 'https://youtube.com/shorts/bj0u58oK8ds',
+      featured: true,
+      features: [
+        'Personal finance tracking',
+        'Expense categorization',
+        'Budget management',
+        'Intuitive user interface',
+        'Local data storage'
+      ]
+    },
+    {
+      id: 8,
       title: 'Chicago School Data Explorer',
       description: 'Built a data analysis tool using SQL and Python to explore public school performance metrics in Chicago. Extracted insights through complex SQL queries and visualized results in Jupyter Notebooks. (April 2024)',
       icon: '🏫',
@@ -94,92 +220,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 2,
-      title: 'Hiking Adventure App',
-      description: 'A comprehensive Flutter mobile application designed for outdoor enthusiasts. Features real-time GPS tracking, offline maps, trail recommendations, and Firebase integration for data management.',
-      icon: '🏔️',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'Firebase', 'GPS', 'Mobile Development'],
-      github: 'https://github.com/taqitazwar/Hiking-App',
-      featured: true,
-      features: [
-        'Real-time GPS tracking',
-        'Firebase integration',
-        'Trail recommendations',
-        'Offline functionality',
-        'User authentication'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Dear Diary App',
-      description: 'A privacy-focused personal diary application built with Flutter. Features secure local storage, mood tracking, and intuitive user interface for daily journaling and reflection.',
-      icon: '📖',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'SQLite', 'Mobile UI/UX'],
-      github: 'https://github.com/taqitazwar/dear_diary_app',
-      featured: true,
-      features: [
-        'Secure local storage',
-        'Mood tracking',
-        'Daily journaling',
-        'Intuitive UI design',
-        'Privacy-focused architecture'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Hanoi Explorer App',
-      description: 'An Android city explorer application for discovering Hanoi. Built with Flutter featuring local recommendations, cultural insights, and interactive city navigation for tourists and locals.',
-      icon: '🏛️',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'Android', 'Location Services'],
-      github: 'https://github.com/taqitazwar/hanoi_explorer_app',
-      featured: true,
-      features: [
-        'Local recommendations',
-        'Cultural insights',
-        'Interactive navigation',
-        'Tourist-friendly design',
-        'Location-based services'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Wordnet Server',
-      description: 'A Java socket-based word guessing game server implementing client-server architecture. Features multi-client support, real-time communication, and game state management.',
-      icon: '🎯',
-      category: 'Desktop',
-      tech: ['Java', 'Socket Programming', 'Networking', 'Multi-threading'],
-      github: 'https://github.com/taqitazwar/Wordnet-Server',
-      featured: true,
-      features: [
-        'Socket-based communication',
-        'Multi-client support',
-        'Real-time game logic',
-        'Server-client architecture',
-        'Thread management'
-      ]
-    },
-    {
-      id: 6,
-      title: '2D Rubik\'s Cube Solver',
-      description: 'An intelligent 2D Rubik\'s cube solver implemented in Java. Features algorithm optimization, visual representation, and step-by-step solution generation with efficient solving techniques.',
-      icon: '🧩',
-      category: 'Desktop',
-      tech: ['Java', 'Algorithms', 'Problem Solving', 'GUI'],
-      github: 'https://github.com/taqitazwar/2D-Rubiks-Cube-Solver',
-      featured: true,
-      features: [
-        'Algorithm optimization',
-        'Visual cube representation',
-        'Step-by-step solutions',
-        'Efficient solving techniques',
-        'Interactive GUI'
-      ]
-    },
-    {
-      id: 7,
+      id: 9,
       title: 'Stock Data Analysis',
       description: 'Built a multi-notebook data pipeline to extract and visualize stock market data using Python APIs and web scraping. Analyzed trends with real-time financial data and created visual plots for insights. (July 2024)',
       icon: '📈',
@@ -196,7 +237,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 8,
+      id: 10,
       title: 'Movie Search Web App',
       description: 'A responsive front-end web application that fetches and displays real-time movie data using the TMDb API. Integrated dynamic search, color-coded ratings, and smooth UI transitions. (December 2023)',
       icon: '🎬',
@@ -213,7 +254,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 9,
+      id: 11,
       title: 'Kivi Board Game',
       description: 'A Java-based digital recreation of the classic Kivi board game. Features strategic gameplay, AI opponents, and intuitive user interface with game state management.',
       icon: '🎲',
@@ -227,40 +268,6 @@ const Projects = ({ setCurrentPage }) => {
         'User-friendly interface',
         'Game state management',
         'Classic board game recreation'
-      ]
-    },
-    {
-      id: 10,
-      title: 'ZeroWaste Intersession Project',
-      description: 'A collaborative Flutter project focused on sustainability and waste reduction. Developed during intersession with team collaboration and modern mobile development practices.',
-      icon: '♻️',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'Team Collaboration', 'Sustainability'],
-      github: 'https://github.com/taqitazwar/gr06-zerowaste-25-intersession',
-      featured: false,
-      features: [
-        'Sustainability focus',
-        'Team collaboration',
-        'Flutter mobile development',
-        'Waste reduction features',
-        'Modern development practices'
-      ]
-    },
-    {
-      id: 11,
-      title: 'Expense Tracker',
-      description: 'A personal finance management application for tracking daily expenses and budget management. Features intuitive interface and comprehensive expense categorization.',
-      icon: '💰',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'Local Storage', 'UI/UX'],
-      github: 'https://github.com/taqitazwar/expense_tracker',
-      featured: false,
-      features: [
-        'Personal finance tracking',
-        'Expense categorization',
-        'Budget management',
-        'Intuitive user interface',
-        'Local data storage'
       ]
     }
   ];
@@ -343,6 +350,30 @@ const Projects = ({ setCurrentPage }) => {
                   </ul>
                 </div>
               </div>
+
+              {project.youtube && (
+                <div className="project-video">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src={`https://www.youtube.com/embed/${
+                      project.youtube.includes('/shorts/') 
+                        ? project.youtube.split('/shorts/')[1]
+                        : project.youtube.includes('youtu.be/')
+                        ? project.youtube.split('youtu.be/')[1]
+                        : project.youtube.split('v=')[1]
+                    }`}
+                    title="App Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      borderRadius: '10px',
+                      marginBottom: '1rem'
+                    }}
+                  ></iframe>
+                </div>
+              )}
 
               <div className="project-actions">
                 <a 
