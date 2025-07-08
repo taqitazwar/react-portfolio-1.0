@@ -8,6 +8,7 @@ const Home = ({ setCurrentPage }) => {
   const [startY, setStartY] = useState(0);
   const [startX, setStartX] = useState(0);
   const flipCardRef = useRef(null);
+  const flipTimeoutRef = useRef(null);
 
   // Handle touch/swipe for flip
   const handleTouchStart = (e) => {
@@ -35,9 +36,23 @@ const Home = ({ setCurrentPage }) => {
     }
   };
 
-  // Handle click for easy flipping
+  // Handle click for easy flipping with auto-flip back
   const handleClick = () => {
-    setIsFlipped(!isFlipped);
+    // Clear any existing timeout
+    if (flipTimeoutRef.current) {
+      clearTimeout(flipTimeoutRef.current);
+    }
+    
+    // If not flipped, flip to "Open to Work" and set timeout to flip back
+    if (!isFlipped) {
+      setIsFlipped(true);
+      flipTimeoutRef.current = setTimeout(() => {
+        setIsFlipped(false);
+      }, 1000);
+    } else {
+      // If already flipped, flip back immediately
+      setIsFlipped(false);
+    }
   };
 
   useEffect(() => {
@@ -86,6 +101,9 @@ const Home = ({ setCurrentPage }) => {
 
     return () => {
       gsap.killTweensOf("*");
+      if (flipTimeoutRef.current) {
+        clearTimeout(flipTimeoutRef.current);
+      }
     };
   }, []);
 

@@ -32,17 +32,17 @@
 }
 
 .home-container {
-  min-height: 80vh;
+  height: 100vh;
   background: 
     linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%),
     radial-gradient(ellipse at top center, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     radial-gradient(ellipse at bottom center, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 2rem 1rem 1rem;
+  padding: 0.2rem 1rem 0.5rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -143,7 +143,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.3rem;
 }
 
 .hero-main {
@@ -325,6 +325,7 @@
   display: flex;
   gap: 1.2rem;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .social-link {
@@ -2880,40 +2881,135 @@ body {
 
 @media (max-width: 768px) {
   .home-container {
-    padding: 1rem 0.5rem 0.5rem;
-    align-items: flex-start;
+    padding: 0.1rem 0.5rem 0.3rem;
+    align-items: center;
+    overflow: hidden;
   }
 
   .hero-content {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .hero-main {
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.6rem;
   }
 
   .flip-card-container {
-    width: 110px;
-    height: 110px;
+    width: 180px;
+    height: 180px;
   }
 
   .profile-image-container {
-    width: 110px;
-    height: 110px;
+    width: 180px;
+    height: 180px;
   }
 
   .open-to-work {
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 
   .work-status-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .status-main {
-    font-size: 0.7rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .flip-instruction {
+    bottom: -35px;
+    font-size: 0.8rem;
+  }
+
+  .greeting-text {
+    font-size: 1.3rem;
+  }
+
+  .main-name {
+    font-size: clamp(2.2rem, 7vw, 2.8rem);
+  }
+
+  .role-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  .hire-me-btn,
+  .resume-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-icon {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-link {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-link svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .floating-element {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0.05rem 0.4rem 0.2rem;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    gap: 0.3rem;
+  }
+
+  .hero-main {
+    gap: 0.5rem;
+  }
+
+  .flip-card-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .open-to-work {
+    padding: 1.2rem;
+  }
+
+  .work-status-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .status-main {
+    font-size: 0.9rem;
     line-height: 1.1;
   }
 
@@ -2923,37 +3019,34 @@ body {
   }
 
   .greeting-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .main-name {
-    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
 
   .role-subtitle {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .hero-actions {
-    flex-direction: column;
-    gap: 0.4rem;
-    align-items: center;
+    gap: 0.2rem;
   }
 
   .hire-me-btn,
   .resume-btn {
-    width: 100%;
-    max-width: 200px;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.3rem;
+    font-size: 1rem;
   }
 
   .btn-icon {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .social-icons {
-    gap: 0.6rem;
+    gap: 0.8rem;
+    margin-bottom: 1.3rem;
   }
 
   .social-link {
@@ -2967,94 +3060,6 @@ body {
   }
 
   .floating-element {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-container {
-    padding: 0.8rem 0.4rem 0.4rem;
-    align-items: flex-start;
-  }
-
-  .hero-content {
-    gap: 0.4rem;
-  }
-
-  .hero-main {
-    gap: 0.5rem;
-  }
-
-  .flip-card-container {
-    width: 90px;
-    height: 90px;
-  }
-
-  .profile-image-container {
-    width: 90px;
-    height: 90px;
-  }
-
-  .open-to-work {
-    padding: 0.5rem;
-  }
-
-  .work-status-icon {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .status-main {
-    font-size: 0.6rem;
-    line-height: 1;
-  }
-
-  .flip-instruction {
-    bottom: -25px;
-    font-size: 0.6rem;
-  }
-
-  .greeting-text {
-    font-size: 0.9rem;
-  }
-
-  .main-name {
-    font-size: clamp(1.2rem, 6vw, 1.6rem);
-  }
-
-  .role-subtitle {
-    font-size: 0.7rem;
-  }
-
-  .hero-actions {
-    gap: 0.3rem;
-  }
-
-  .hire-me-btn,
-  .resume-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-
-  .btn-icon {
-    font-size: 0.7rem;
-  }
-
-  .social-icons {
-    gap: 0.5rem;
-  }
-
-  .social-link {
-    width: 60px;
-    height: 60px;
-  }
-
-  .social-link svg {
-    width: 50px;
-    height: 50px;
-  }
-
-  .floating-element {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
