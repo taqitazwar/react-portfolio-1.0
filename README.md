@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React showcasing my journey as
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com) <!-- Replace with your actual URL -->
+[View Live Portfolio](https://taqitazwar.com)
 
 ## ✨ Features
 
@@ -171,7 +171,7 @@ src/
 ## 📧 Contact
 
 **Taqi Tazwar**
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- Email: [ttazwar@mun.ca](mailto:ttazwar@mun.ca)
 - LinkedIn: [linkedin.com/in/ttazwar](https://linkedin.com/in/ttazwar)
 - GitHub: [github.com/taqitazwar](https://github.com/taqitazwar)
 
