@@ -174,10 +174,6 @@ src/
 - Email: [ttazwar@mun.ca](mailto:ttazwar@mun.ca)
 - LinkedIn: [linkedin.com/in/ttazwar](https://linkedin.com/in/ttazwar)
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **GSAP** for amazing animations
