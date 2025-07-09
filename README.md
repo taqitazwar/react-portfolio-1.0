@@ -1,4 +1,4 @@
-# 🦆 Duck Eye Portfolio
+# 🦆 CICS Portfolio
 
 A modern, responsive portfolio website built with React showcasing my journey as an aspiring software developer.
 
@@ -173,7 +173,6 @@ src/
 **Taqi Tazwar**
 - Email: [ttazwar@mun.ca](mailto:ttazwar@mun.ca)
 - LinkedIn: [linkedin.com/in/ttazwar](https://linkedin.com/in/ttazwar)
-- GitHub: [github.com/taqitazwar](https://github.com/taqitazwar)
 
 ## 📄 License
 
