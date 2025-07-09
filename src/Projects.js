@@ -79,6 +79,24 @@ const Projects = ({ setCurrentPage }) => {
   const projects = [
     {
       id: 1,
+      title: 'This Website',
+      description: 'A modern, interactive personal portfolio website built with React. Features immersive 3D backgrounds, smooth animations, interactive mini-games, and responsive design. Showcases advanced web development skills with modern JavaScript frameworks and libraries.',
+      icon: '🌐',
+      category: 'Web',
+      tech: ['React', 'JavaScript', 'Three.js', 'GSAP', 'Framer Motion', 'CSS3', 'HTML5'],
+      github: 'https://github.com/taqitazwar/react-portfolio-1.0',
+      featured: true,
+      features: [
+        'Interactive 3D Three.js backgrounds',
+        'Smooth GSAP animations and transitions',
+        'Responsive design for all devices',
+        'Modern component-based architecture',
+        'Dynamic navigation and routing',
+      ],
+      isPortfolio: true
+    },
+    {
+      id: 2,
       title: 'ZeroWaste Intersession Project',
       description: 'A collaborative Flutter project focused on sustainability and waste reduction. Developed during intersession with team collaboration and modern mobile development practices. Have a look at our app running live!',
       icon: '♻️',
@@ -96,7 +114,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: 'Wordnet Server',
       description: 'A Java socket-based word guessing game server implementing client-server architecture. Features multi-client support, real-time communication, and game state management.',
       icon: '🎯',
@@ -114,7 +132,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: 'Hiking Adventure App',
       description: 'A comprehensive Flutter mobile application designed for outdoor enthusiasts. Features real-time GPS tracking, offline maps, trail recommendations, and Firebase integration for data management.',
       icon: '🏔️',
@@ -132,7 +150,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: '2D Rubik\'s Cube Solver',
       description: 'An intelligent 2D Rubik\'s cube solver implemented in Java. Features algorithm optimization, visual representation, and step-by-step solution generation with efficient solving techniques.',
       icon: '🧩',
@@ -150,7 +168,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: 'Dear Diary App',
       description: 'A privacy-focused personal diary application built with Flutter. Features secure local storage, mood tracking, and intuitive user interface for daily journaling and reflection.',
       icon: '📖',
@@ -165,24 +183,6 @@ const Projects = ({ setCurrentPage }) => {
         'Daily journaling',
         'Intuitive UI design',
         'Privacy-focused architecture'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Hanoi Explorer App',
-      description: 'An Android city explorer application for discovering Hanoi. Built with Flutter featuring local recommendations, cultural insights, and interactive city navigation for tourists and locals.',
-      icon: '🏛️',
-      category: 'Mobile',
-      tech: ['Flutter', 'Dart', 'Android', 'Location Services'],
-      github: 'https://github.com/taqitazwar/hanoi_explorer_app',
-      youtube: 'https://youtube.com/shorts/cRWeD5Eg4M8',
-      featured: true,
-      features: [
-        'Local recommendations',
-        'Cultural insights',
-        'Interactive navigation',
-        'Tourist-friendly design',
-        'Location-based services'
       ]
     },
     {
@@ -222,6 +222,24 @@ const Projects = ({ setCurrentPage }) => {
     },
     {
       id: 9,
+      title: 'Hanoi Explorer App',
+      description: 'An Android city explorer application for discovering Hanoi. Built with Flutter featuring local recommendations, cultural insights, and interactive city navigation for tourists and locals.',
+      icon: '🏛️',
+      category: 'Mobile',
+      tech: ['Flutter', 'Dart', 'Android', 'Location Services'],
+      github: 'https://github.com/taqitazwar/hanoi_explorer_app',
+      youtube: 'https://youtube.com/shorts/cRWeD5Eg4M8',
+      featured: false,
+      features: [
+        'Local recommendations',
+        'Cultural insights',
+        'Interactive navigation',
+        'Tourist-friendly design',
+        'Location-based services'
+      ]
+    },
+    {
+      id: 10,
       title: 'Stock Data Analysis',
       description: 'Built a multi-notebook data pipeline to extract and visualize stock market data using Python APIs and web scraping. Analyzed trends with real-time financial data and created visual plots for insights. (July 2024)',
       icon: '📈',
@@ -238,7 +256,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 10,
+      id: 11,
       title: 'Movie Search Web App',
       description: 'A responsive front-end web application that fetches and displays real-time movie data using the TMDb API. Integrated dynamic search, color-coded ratings, and smooth UI transitions. (December 2023)',
       icon: '🎬',
@@ -255,7 +273,7 @@ const Projects = ({ setCurrentPage }) => {
       ]
     },
     {
-      id: 11,
+      id: 12,
       title: 'Kivi Board Game',
       description: 'A Java-based digital recreation of the classic Kivi board game. Features strategic gameplay, AI opponents, and intuitive user interface with game state management.',
       icon: '🎲',
@@ -270,24 +288,6 @@ const Projects = ({ setCurrentPage }) => {
         'Game state management',
         'Classic board game recreation'
       ]
-    },
-    {
-      id: 12,
-      title: 'This Website',
-      description: 'A modern, interactive personal portfolio website built with React. Features immersive 3D backgrounds, smooth animations, interactive mini-games, and responsive design. Showcases advanced web development skills with modern JavaScript frameworks and libraries.',
-      icon: '🌐',
-      category: 'Web',
-      tech: ['React', 'JavaScript', 'Three.js', 'GSAP', 'Framer Motion', 'CSS3', 'HTML5'],
-      github: 'https://github.com/taqitazwar/react-portfolio-1.0',
-      featured: true,
-      features: [
-        'Interactive 3D Three.js backgrounds',
-        'Smooth GSAP animations and transitions',
-        'Responsive design for all devices',
-        'Modern component-based architecture',
-        'Dynamic navigation and routing',
-      ],
-      isPortfolio: true
     }
   ];
 
