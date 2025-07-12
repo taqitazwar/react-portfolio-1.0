@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React showcasing my journey as an aspiring software developer.
 
-## Live Demo
+## Live
 
 [View Live Portfolio](https://taqitazwar.com)
 
