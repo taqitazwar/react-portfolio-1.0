@@ -378,7 +378,7 @@
 }
 
 .social-link.linkedin:hover {
-  background: linear-gradient(135deg, var(--pink), var(--bright-pink));
+  background: linear-gradient(135deg, #0077B5, #005885);
   color: white;
 }
 

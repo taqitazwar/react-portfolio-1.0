@@ -121,7 +121,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Desktop',
       tech: ['Java', 'Socket Programming', 'Networking', 'Multi-threading'],
       github: 'https://github.com/taqitazwar/Wordnet-Server',
-      youtube: 'https://youtu.be/wGynChBSLXk',
+      youtube: 'https://youtu.be/-PH0_Q-QiKM',
       featured: true,
       features: [
         'Socket-based communication',
@@ -139,7 +139,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Mobile',
       tech: ['Flutter', 'Dart', 'Firebase', 'GPS', 'Mobile Development'],
       github: 'https://github.com/taqitazwar/a4-discover-and-log-nl-hikes-taqitazwar',
-      youtube: 'https://youtube.com/shorts/fzCnzvCiBuc',
+      youtube: 'https://youtu.be/gmUKBqCLwPQ',
       featured: true,
       features: [
         'Real-time GPS tracking',
@@ -157,7 +157,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Desktop',
       tech: ['Java', 'Algorithms', 'Problem Solving', 'GUI'],
       github: 'https://github.com/taqitazwar/2D-Rubiks-Cube-Solver',
-      youtube: 'https://youtu.be/P08ZxvFuUM4',
+      youtube: 'https://youtu.be/ydkVJTvn0zc',
       featured: true,
       features: [
         'Algorithm optimization',
@@ -175,7 +175,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Mobile',
       tech: ['Flutter', 'Dart', 'SQLite', 'Mobile UI/UX'],
       github: 'https://github.com/taqitazwar/dear_diary_app',
-      youtube: 'https://youtube.com/shorts/rziuLGuN05E',
+      youtube: 'https://youtu.be/ip_eivE_AZY',
       featured: true,
       features: [
         'Secure local storage',
@@ -193,7 +193,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Mobile',
       tech: ['Flutter', 'Dart', 'Local Storage', 'UI/UX'],
       github: 'https://github.com/taqitazwar/expense_tracker',
-      youtube: 'https://youtube.com/shorts/bj0u58oK8ds',
+      youtube: 'https://youtu.be/c9j_gt3IjJI',
       featured: true,
       features: [
         'Personal finance tracking',
@@ -263,6 +263,7 @@ const Projects = ({ setCurrentPage }) => {
       category: 'Web',
       tech: ['HTML', 'CSS', 'JavaScript', 'TMDb API'],
       github: 'https://github.com/taqitazwar/Movie-Search-Web-App',
+      youtube: 'https://youtu.be/gruYWaM-1tg',
       featured: false,
       features: [
         'Real-time movie data fetching',
