@@ -1,38 +1,32 @@
-# 🦆 CICS Portfolio
+# CICS Portfolio
 
 A modern, responsive portfolio website built with React showcasing my journey as an aspiring software developer.
 
-## 🚀 Live Demo
+## Live Demo
 
 [View Live Portfolio](https://taqitazwar.com)
 
-## ✨ Features
+## Features
 
-### 🎯 Interactive Elements
+### Interactive Elements
 - **Flip Profile Picture**: Click to reveal "Open to Work" status with auto-flip back
 - **Smooth Animations**: GSAP-powered animations throughout the site
 - **Custom Cursor**: Enhanced cursor effects on desktop (hidden on mobile)
 - **Floating Background Elements**: Dynamic floating icons for visual appeal
 
-### 📱 Mobile-First Design
-- **Responsive Layout**: Optimized for all screen sizes
-- **Mobile Navigation**: Horizontal navigation bar instead of hamburger menu
-- **Touch-Friendly**: Optimized interactions for mobile devices
-- **No Scrolling Home**: Perfectly fitted viewport design
-
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - **Glassmorphism Effects**: Frosted glass aesthetic with backdrop blur
 - **Gradient Animations**: Dynamic color transitions and flows
 - **Dark Theme**: Professional dark mode design
 - **Smooth Transitions**: Fluid animations between states
 
-### 🎮 Interactive Sections
+### Interactive Sections
 - **Mini Games**: Built-in games including Duck Catch, Memory Match, and Reaction Time
 - **Skills Visualization**: Interactive skill progress bars
 - **Project Showcase**: Detailed project cards with hover effects
 - **Contact Forms**: Functional contact integration
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - **React.js** - Component-based UI library
@@ -51,7 +45,7 @@ A modern, responsive portfolio website built with React showcasing my journey as
 - **Git & GitHub** - Version control
 - **npm** - Package management
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -110,7 +104,7 @@ src/
 └── index.js            # App entry point
 ```
 
-## 🎨 Key Features Breakdown
+##  Key Features Breakdown
 
 ### Interactive Profile Picture
 - Click to flip and reveal "Open to Work" status
@@ -136,7 +130,7 @@ src/
 - Hover effects and transitions
 - Real-time skill level display
 
-## 🚀 Performance Optimizations
+##  Performance Optimizations
 
 - **Lazy Loading**: Components loaded on demand
 - **Optimized Images**: Compressed and responsive images
@@ -144,7 +138,7 @@ src/
 - **CSS Optimization**: Efficient selectors and animations
 - **Mobile Performance**: Touch-optimized interactions
 
-## 🎯 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -152,7 +146,7 @@ src/
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📱 Mobile Optimizations
+## Mobile Optimizations
 
 - **Touch-friendly interactions**
 - **Optimized font sizes** for readability
@@ -184,5 +178,3 @@ src/
 ---
 
 ### 🌟 Star this repo if you found it helpful!
-
-**Made with ❤️ by Taqi Tazwar**
