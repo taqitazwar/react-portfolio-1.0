@@ -399,6 +399,7 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Social Links */
@@ -435,18 +436,19 @@
   transition: all 0.3s ease;
   min-width: 100px;
   backdrop-filter: blur(10px);
+  transition: background 0.3s, color 0.3s;
 }
 
 .social-link:hover {
-  border-color: var(--social-color);
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background: var(--social-color, #333);
+  color: #fff;
 }
 
 .social-icon {
-  font-size: 2rem;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+  font-size: 0.45rem;
+  margin-top: 0.4em;
 }
 
 .social-name {

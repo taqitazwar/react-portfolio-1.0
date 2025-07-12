@@ -6,11 +6,11 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const menuItems = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'aboutme', label: 'About Me', icon: '👤' },
-    { id: 'projects', label: 'Projects', icon: '💼' },
-    { id: 'minigames', label: 'Mini Games', icon: '🎮' },
-    { id: 'contact', label: 'Contact', icon: '📧' },
+    { id: 'home', label: 'Home' },
+    { id: 'aboutme', label: 'About Me' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'minigames', label: 'Mini Games' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   useEffect(() => {
@@ -60,7 +60,6 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
               className={`nav-item ${currentPage === item.id ? 'active' : ''}`}
               onClick={() => handlePageChange(item.id)}
             >
-              <span className="nav-icon">{item.icon}</span>
               <span className="nav-label">{item.label}</span>
             </button>
           ))}
@@ -87,7 +86,6 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
             className={`mobile-nav-item ${currentPage === item.id ? 'active' : ''}`}
             onClick={() => handlePageChange(item.id)}
           >
-            <span className="mobile-nav-icon">{item.icon}</span>
             <span className="mobile-nav-label">{item.label}</span>
           </button>
         ))}

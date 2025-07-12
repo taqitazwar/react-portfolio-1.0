@@ -182,10 +182,10 @@ const AboutMe = ({ setCurrentPage }) => {
 
   const experience = [
     {
-      title: 'Entrepreneurship Training Program Participant',
+      title: 'Entrepreneurship Training Program',
       company: 'Memorial University of Newfoundland',
       period: 'January 2025 - May 2025',
-      type: 'Educational',
+      type: 'Full-Time',
       description: 'Participated in Memorial\'s comprehensive Entrepreneurship Training Program (ETP), an education program for graduate students interested in starting a business and learning entrepreneurship fundamentals.',
       achievements: [
         'Completed Discover and Develop programs building essential entrepreneurial skills and knowledge',
@@ -199,7 +199,7 @@ const AboutMe = ({ setCurrentPage }) => {
       title: 'Brand Ambassador',
       company: 'Gap Inc',
       period: 'September 2023 - Present',
-      type: 'Permanent',
+      type: 'Full-Time',
       description: 'Promoting brand awareness and driving sales through customer engagement and marketing initiatives.',
       achievements: [
         'Achieved "Employee of the Month" recognition by surpassing monthly target by 15%',
@@ -212,7 +212,7 @@ const AboutMe = ({ setCurrentPage }) => {
       title: 'Outbound Sales Representative',
       company: 'The Sydney Call Centre',
       period: 'February 2023 - November 2023',
-      type: 'Remote',
+      type: 'Full-Time',
       description: 'Managed customer relationships and technical sales operations while developing communication and data management skills.',
       achievements: [
         'Handled 80+ customer interactions daily using CRM systems and database management',
@@ -225,7 +225,7 @@ const AboutMe = ({ setCurrentPage }) => {
       title: 'Ambassador',
       company: 'International Youth Math Challenge',
       period: 'August 2019 -\nSeptember 2023',
-      type: 'Volunteer',
+      type: 'Full-Time',
       description: 'Promoted STEM education and mathematical problem-solving among youth participants.',
       achievements: [
         'Facilitated mathematical problem-solving sessions for international participants',

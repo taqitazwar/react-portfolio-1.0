@@ -168,7 +168,6 @@ const Home = ({ setCurrentPage }) => {
               className="hire-me-btn interactive"
               onClick={() => setCurrentPage('contact')}
             >
-              <span className="btn-icon">💼</span>
               Hire Me
             </button>
             
@@ -178,7 +177,6 @@ const Home = ({ setCurrentPage }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="btn-icon">📄</span>
               Resume
             </a>
           </div>

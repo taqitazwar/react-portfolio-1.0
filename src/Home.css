@@ -149,7 +149,7 @@
 .hero-main {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 7rem;
   justify-content: center;
   width: 100%;
 }
