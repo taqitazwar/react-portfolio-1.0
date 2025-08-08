@@ -138,7 +138,7 @@ const Projects = ({ setCurrentPage }) => {
       icon: '🏔️',
       category: 'Mobile',
       tech: ['Flutter', 'Dart', 'Firebase', 'GPS', 'Mobile Development'],
-      github: 'https://github.com/taqitazwar/a4-discover-and-log-nl-hikes-taqitazwar',
+      github: 'https://github.com/taqitazwar/hiking-adventure-app',
       youtube: 'https://youtu.be/gmUKBqCLwPQ',
       featured: true,
       features: [
