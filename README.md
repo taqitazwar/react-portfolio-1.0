@@ -76,7 +76,7 @@ src/
 ```
 
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -84,13 +84,13 @@ src/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📧 Contact
+## Contact
 
 **Taqi Tazwar**
 - Email: [ttazwar@mun.ca](mailto:ttazwar@mun.ca)
 - LinkedIn: [linkedin.com/in/ttazwar](https://linkedin.com/in/ttazwar)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **GSAP** for amazing animations
 - **React Community** for excellent documentation
