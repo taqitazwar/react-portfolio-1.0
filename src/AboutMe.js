@@ -141,18 +141,18 @@ const AboutMe = ({ setCurrentPage }) => {
   }, []);
 
   const skills = [
-    { name: 'Python', level: 100, icon: '🐍', category: 'Programming' },
-    { name: 'Java', level: 100, icon: '☕', category: 'Programming' },
-    { name: 'JavaScript', level: 100, icon: '⚡', category: 'Programming' },
-    { name: 'C', level: 100, icon: '💻', category: 'Programming' },
-    { name: 'HTML5 & CSS3', level: 100, icon: '🌐', category: 'Web' },
-    { name: 'React.js', level: 100, icon: '⚛️', category: 'Web' },
-    { name: 'Node.js & Express.js', level: 100, icon: '🌟', category: 'Web' },
-    { name: 'SQL & SQLite', level: 100, icon: '🗄️', category: 'Database' },
-    { name: 'MongoDB', level: 100, icon: '🍃', category: 'Database' },
-    { name: 'Git & GitHub', level: 100, icon: '🔧', category: 'Tools' },
-    { name: 'Data Analysis (Pandas, NumPy)', level: 100, icon: '📊', category: 'Data Science' },
-    { name: 'Flutter & Dart', level: 100, icon: '📱', category: 'Mobile' }
+    { name: 'Python', category: 'Programming' },
+    { name: 'Java', category: 'Programming' },
+    { name: 'JavaScript', category: 'Programming' },
+    { name: 'C', category: 'Programming' },
+    { name: 'HTML5 & CSS3', category: 'Web' },
+    { name: 'React.js', category: 'Web' },
+    { name: 'Node.js & Express.js', category: 'Web' },
+    { name: 'SQL & SQLite', category: 'Database' },
+    { name: 'MongoDB', category: 'Database' },
+    { name: 'Git & GitHub', category: 'Tools' },
+    { name: 'Data Analysis (Pandas, NumPy)', category: 'Data Science' },
+    { name: 'Flutter & Dart', category: 'Mobile' }
   ];
 
   const education = [
@@ -161,22 +161,12 @@ const AboutMe = ({ setCurrentPage }) => {
       school: 'Memorial University of Newfoundland',
       period: 'May 2022 - Present',
       description: 'Pursuing a comprehensive degree in Computer Science with a focus on software development and algorithms.',
-      achievements: [
-        'Currently enrolled in Bachelor of Science program',
-        'Studying software engineering principles',
-        'Hands-on experience with various programming languages'
-      ]
     },
     {
       degree: 'Certificate in Business Administration',
       school: 'Memorial University of Newfoundland',
       period: 'May 2025 - Present',
       description: 'Complementing technical skills with business knowledge and management principles.',
-      achievements: [
-        'Business management fundamentals',
-        'Strategic planning and analysis',
-        'Entrepreneurship and leadership skills'
-      ]
     }
   ];
 
@@ -202,9 +192,8 @@ const AboutMe = ({ setCurrentPage }) => {
       type: 'Full-Time',
       description: 'Promoting brand awareness and driving sales through customer engagement and marketing initiatives.',
       achievements: [
-        'Achieved "Employee of the Month" recognition by surpassing monthly target by 15%',
-        'Recognized 4 times for most lead creations, contributing to more overall revenue through email marketing',
-        'Advised customers on product selection, optimizing satisfaction scores, increasing conversion by 15% and boosting business',
+        'Achieved "Employee of the Month" for excellence',
+        'Recognized four times for most lead creations',
         'Developed strong communication and customer service skills in fast-paced retail environment'
       ]
     },
@@ -216,8 +205,8 @@ const AboutMe = ({ setCurrentPage }) => {
       description: 'Managed customer relationships and technical sales operations while developing communication and data management skills.',
       achievements: [
         'Handled 80+ customer interactions daily using CRM systems and database management',
-        'Exceeded weekly performance targets by 20% through analytical approach and data-driven decision making',
-        'Maintained 100% documentation accuracy in customer database, improving data integrity',
+        'Exceeded weekly performance targets through analytical approach and data-driven decision making',
+        'Maintained 100% documentation accuracy in customer database',
         'Developed strong communication and problem-solving skills applicable to technical roles'
       ]
     },
@@ -241,24 +230,21 @@ const AboutMe = ({ setCurrentPage }) => {
     interests: [
       'Software Development',
       'Web Development',
-      'Data Analysis',
       'Mobile App Development',
       'Machine Learning',
       'Artificial Intelligence',
       'Problem Solving'
     ],
-    languages: ['English (Fluent)', 'Bengali (Native)', 'Hindi (Fluent)', 'Urdu (Fluent)', 'Arabic (Intermediate)'],
-    hobbies: ['Programming', 'Automotive Technology', 'Collecting Stamps', 'Technology', 'Small Businesses'],
-    values: ['Innovation', 'Continuous Learning', 'Problem Solving', 'Quality Code', 'Teamwork']
+    languages: ['English', 'Bengali', 'Hindi', 'Urdu', 'Arabic'],
+    hobbies: ['Programming', 'Automotive Technology', 'Philately', 'Small Businesses']
   };
 
   const achievements = [
-    { title: 'Portfolio Website Creation', year: '2025', description: 'Created portfolio website from scratch using React.js with modern UI/UX design' },
-    { title: 'AWS Cloud Certification Journey', year: '2024', description: 'Started AWS Cloud Practitioner certification preparation' },
-    { title: 'Employee of the Month', year: '2024', description: 'Recognized for highest loyal membership generations increasing monthly revenue through email marketing' },
-    { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets by 20% through analytical approach and data-driven decisions' },
+    { title: 'NL Eats Hackathon Winner', year: '2025', description: 'Pitched a creative business food insecurity solution for Newfoundland' },
+    { title: 'Employee of the Month', year: '2024', description: 'Recognized for highest loyal membership generations' },
+    { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets through analytical approach and data-driven decisions' },
     { title: 'Daily Stars Highest Achievers Award', year: '2019', description: 'Awarded for exceptional academic performance and excellence in mathematics and science' },
-    { title: 'Technical Leadership', year: '2019 - Present', description: 'Selected as Ambassador for International Youth Math Challenge, promoting STEM education globally' }
+    { title: 'Technical Leadership', year: '2019 - 2023', description: 'Selected as Ambassador for International Youth Math Challenge, promoting STEM education globally' }
   ];
 
   return (
