@@ -253,7 +253,7 @@ const AboutMe = ({ setCurrentPage }) => {
   };
 
   const achievements = [
-    { title: 'NL Eats Hackathon Winner', year: '2025', description: 'Pitched a creative food insecurity solution and built a flutter app as product.' },
+    { title: 'Portfolio Website Creation', year: '2025', description: 'Created portfolio website from scratch using React.js with modern UI/UX design' },
     { title: 'AWS Cloud Certification Journey', year: '2024', description: 'Started AWS Cloud Practitioner certification preparation' },
     { title: 'Employee of the Month', year: '2024', description: 'Recognized for highest loyal membership generations increasing monthly revenue through email marketing' },
     { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets by 20% through analytical approach and data-driven decisions' },
@@ -494,3 +494,5 @@ const AboutMe = ({ setCurrentPage }) => {
     </div>
   );
 };
+
+export default AboutMe; 
