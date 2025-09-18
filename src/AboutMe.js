@@ -253,10 +253,10 @@ const AboutMe = ({ setCurrentPage }) => {
   };
 
   const achievements = [
-    { title: 'Portfolio Website Creation', year: '2025', description: 'Created portfolio website from scratch using React.js with modern UI/UX design' },
-    { title: 'AWS Cloud Certification Journey', year: '2024', description: 'Started AWS Cloud Practitioner certification preparation' },
+    { title: 'Amazon Robotics Hackathon Winner', year: '2025', description: 'Tackled a real world challenge of routing packages efficiently through a network of fulfillment centers.' },
+    { title: 'NLEats Food Forward Hackthon Winner', year: '2025', description: 'Created a technical solution to reduce food insecurity in rural areas in Newfoundland.' },
     { title: 'Employee of the Month', year: '2024', description: 'Recognized for highest loyal membership generations increasing monthly revenue through email marketing' },
-    { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets by 20% through analytical approach and data-driven decisions' },
+    { title: 'Sales Performance Excellence', year: '2023', description: 'Exceeded weekly sales targets through analytical approach and data-driven decisions' },
     { title: 'Daily Stars Highest Achievers Award', year: '2019', description: 'Awarded for exceptional academic performance and excellence in mathematics and science' },
     { title: 'Technical Leadership', year: '2019 - Present', description: 'Selected as Ambassador for International Youth Math Challenge, promoting STEM education globally' }
   ];
