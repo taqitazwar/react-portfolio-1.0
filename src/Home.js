@@ -172,7 +172,7 @@ const Home = ({ setCurrentPage }) => {
             </button>
             
             <a 
-              href="https://drive.google.com/file/d/13E2-pTYKjRlSMZGsMCYiFZAupf-mxvUz/view?usp=drive_link" 
+              href="https://drive.google.com/file/d/1T0yb0ak5DSIsCsGM97vwX6KWUXILva5Y/view?usp=sharing" 
               className="resume-btn interactive"
               target="_blank"
               rel="noopener noreferrer"
