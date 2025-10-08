@@ -43,7 +43,7 @@ const Home = ({ setCurrentPage }) => {
       clearTimeout(flipTimeoutRef.current);
     }
     
-    // If not flipped, flip to "Open to Work" and set timeout to flip back
+    // If not flipped, flip to "Software Developer @ CoLab Software" and set timeout to flip back
     if (!isFlipped) {
       setIsFlipped(true);
       flipTimeoutRef.current = setTimeout(() => {
@@ -146,7 +146,7 @@ const Home = ({ setCurrentPage }) => {
                     <div className="open-to-work">
                       <div className="work-status-icon">💼</div>
                       <div className="work-status-text">
-                        <span className="status-main">OPEN TO WORK</span>
+                        <span className="status-main">Software Developer @ CoLab Software</span>
                       </div>
                     </div>
                   </div>
@@ -159,7 +159,7 @@ const Home = ({ setCurrentPage }) => {
               <h1 className="main-name">
                 Taqi Tazwar
               </h1>
-              <p className="role-subtitle">Aspiring Software Developer</p>
+              <p className="role-subtitle">Software Developer</p>
             </div>
           </div>
           
